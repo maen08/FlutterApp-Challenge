@@ -10,7 +10,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int iconIndex = 0;
-  List<Widget> screenList = [Login(), Logout(), TakeImage()];
+  List<Widget> screenList = [Login()];
 
   void navIcon(int indexPassed) {
     setState(() {
@@ -22,7 +22,13 @@ class _BottomNavState extends State<BottomNav> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         items: [],
+        currentIndex: iconIndex,
+        selectedItemColor: Colors.blue[700],
+        onTap: navIcon,
+
+        
       ),
+      body: Container(child: screenList.elementAt(iconIndex)),
     );
   }
 }
