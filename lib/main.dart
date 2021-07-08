@@ -1,3 +1,4 @@
+import 'package:challenge/screen/otp.dart';
 import 'package:flutter/material.dart';
 import 'package:challenge/screen/login.dart';
 
@@ -9,13 +10,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // home: Login(),
 
-      initialRoute: '/',
+      initialRoute: "/",
       routes: {
-        '/': (context) => Login(),
+        "/": (context) => Login(),
+        "/otp":(context) => Otp(),
         
       },
       debugShowCheckedModeBanner: false,
     );
+    
   }
 }

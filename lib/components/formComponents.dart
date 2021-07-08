@@ -11,6 +11,6 @@ Widget textBtn(String btnName, Function btnFunc) {
 }
 
 
-Widget inputForm(String inputName){
-  return TextField()
-}
+// Widget inputForm(String inputName){
+//   return TextField()
+// }
