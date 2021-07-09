@@ -1,7 +1,4 @@
-// import 'package:challenge/components/formComponents.dart';
-import 'dart:js';
 
-import 'package:challenge/components/formComponents.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -9,7 +6,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+        margin: EdgeInsets.symmetric(horizontal: 50, vertical: 30),
         padding: EdgeInsets.all(10),
         child: Center(
           child: Column(
@@ -24,6 +21,7 @@ class Login extends StatelessWidget {
                 enableSuggestions: false,
                 autocorrect: false,
               ),
+              SizedBox(height: 24,),
               // login button
               ElevatedButton(
                   onPressed: () => Navigator.pushNamed(context, '/otp'),
