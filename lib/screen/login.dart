@@ -24,7 +24,7 @@ class Login extends StatelessWidget {
               SizedBox(height: 24,),
               // login button
               ElevatedButton(
-                  onPressed: () => Navigator.pushNamed(context, '/otp'),
+                  onPressed: () => Navigator.pushNamed(context, '/phone'),
                   child: Text('Login'))
             ],
           ),
