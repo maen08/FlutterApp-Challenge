@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Text('+255'),
                       ),
                     ),
-                    maxLength: 10,
+                    maxLength: 9,
                    
                     controller: _controller,
                   ),
