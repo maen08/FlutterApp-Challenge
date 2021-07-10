@@ -1,4 +1,5 @@
 
+import 'package:challenge/screen/success.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -23,7 +24,7 @@ class Camera extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: ()=>Navigator.pushNamed(context, "/success"),
+                  onPressed: ()=>SuccessSCreen("Image Stored"),
                   child: Text(
                     'Store',
                     style: TextStyle(color: Colors.white),
@@ -35,7 +36,7 @@ class Camera extends StatelessWidget {
                   width: 70,
                 ),
                 ElevatedButton(
-                  onPressed:  ()=>Navigator.pushNamed(context, "/success"),
+                  onPressed:  ()=> SuccessSCreen("Image Deleted!"),
                   child: Text(
                     'Delete',
                     style: TextStyle(color: Colors.white),
@@ -50,4 +51,16 @@ class Camera extends StatelessWidget {
       ),
     );
   }
+}
+
+
+Widget textWidget(String textSuccess) {
+  return Text(
+    textSuccess,
+    style: TextStyle(
+      fontSize: 17,
+      fontWeight: FontWeight.bold,
+      color: Colors.blue[400],
+    ),
+  );
 }

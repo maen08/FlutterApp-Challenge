@@ -1,6 +1,5 @@
 import 'package:challenge/screen/image.dart';
 import 'package:challenge/screen/otp.dart';
-import 'package:challenge/screen/success.dart';
 import 'package:flutter/material.dart';
 import 'package:challenge/screen/login.dart';
 import 'package:challenge/components/bottomNavbar.dart';
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
         "/otp":(context) => Otp(),
         "/home":(context) => BottomNav(),
         "/camera":(context)=>Camera(),
-        "/success":(context)=>Success(),
+        // "/success":(context)=>Success(),
         
       },
       debugShowCheckedModeBanner: false,
