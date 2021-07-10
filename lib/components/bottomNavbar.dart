@@ -10,7 +10,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int iconIndex = 0;
-  List<Widget> screenList = [Login(), Camera()];
+  List<Widget> screenList = [Camera(), Login()];
 
   void navIcon(int indexPassed) {
     setState(() {
@@ -23,14 +23,13 @@ class _BottomNavState extends State<BottomNav> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
+              icon: Icon(Icons.login, color: Colors.black54), label: 'Login'),
+          BottomNavigationBarItem(
               icon: Icon(
                 Icons.camera,
                 color: Colors.black54,
               ),
-
               label: 'Camera'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.login, color: Colors.black54), label: 'Login')
         ],
         currentIndex: iconIndex,
         selectedItemColor: Colors.blue[700],

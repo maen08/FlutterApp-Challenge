@@ -1,4 +1,4 @@
-import 'package:challenge/components/bottomNavbar.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -23,7 +23,7 @@ class Camera extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: null,
+                  onPressed: ()=>Navigator.pushNamed(context, "/success"),
                   child: Text(
                     'Store',
                     style: TextStyle(color: Colors.white),
@@ -35,7 +35,7 @@ class Camera extends StatelessWidget {
                   width: 70,
                 ),
                 ElevatedButton(
-                  onPressed: null,
+                  onPressed:  ()=>Navigator.pushNamed(context, "/success"),
                   child: Text(
                     'Delete',
                     style: TextStyle(color: Colors.white),

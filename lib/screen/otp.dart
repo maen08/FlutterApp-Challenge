@@ -17,7 +17,7 @@ class Otp extends StatelessWidget {
                   height: 10,
                 ),
                 ElevatedButton(
-                    onPressed: () => Navigator.pushNamed(context, '/camera'),
+                    onPressed: () => Navigator.pushNamed(context, '/home'),
                     child: Text('Submit'))
               ],
             ),
