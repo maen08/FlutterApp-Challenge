@@ -24,7 +24,7 @@ class _BottomNavState extends State<BottomNav> {
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.login, color: Colors.black54), label: 'Login'),
-          BottomNavigationBarItem(
+                        BottomNavigationBarItem(
               icon: Icon(
                 Icons.camera,
                 color: Colors.black54,

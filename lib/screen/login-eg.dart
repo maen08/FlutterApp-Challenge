@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:challenge/screen/otp-eg.dart';
 // import 'package:challenge/screen/home-eg.dart';
 
-
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -13,54 +12,55 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Phone Auth'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(children: [
-            Container(
-              margin: EdgeInsets.only(top: 60),
-              child: Center(
-                child: Text(
-                  'Phone Authentication',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 40, right: 10, left: 10),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Phone Number',
-                  prefix: Padding(
-                    padding: EdgeInsets.all(4),
-                    child: Text('+255'),
+      body: Center(
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 2, horizontal: 50),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(children: [
+                Container(
+                  child: Center(
+                    child: Text(
+                      'Phone Number',
+                      style:
+                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
-                // maxLength: 10,
-                // keyboardType: TextInputType.number,
-                controller: _controller,
-              ),
-            )
-          ]),
-          Container(
-            margin: EdgeInsets.all(10),
-            width: double.infinity,
-            child: FlatButton(
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => OTPScreen(_controller.text)));
-              },
-              child: Text(
-                'Next',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          )
-        ],
+                Container(
+                  child: TextField(
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      prefix: Padding(
+                        padding: EdgeInsets.all(4),
+                        child: Text('+255'),
+                      ),
+                    ),
+                    maxLength: 10,
+                   
+                    controller: _controller,
+                  ),
+                )
+              ]),
+              Container(
+                margin: EdgeInsets.all(10),
+                width: double.infinity,
+                child: ElevatedButton(
+                  // color: Colors.blue,
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => OTPScreen(_controller.text)));
+                  },
+                  child: Text(
+                    'Submit',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
