@@ -1,9 +1,8 @@
+
 import 'package:challenge/screen/image.dart';
 import 'package:challenge/screen/login-eg.dart';
-
+import 'package:challenge/screen/camera.dart';
 import 'package:flutter/material.dart';
-
-import 'package:challenge/components/bottomNavbar.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -19,9 +18,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => LoginScreen(),
-
-        "/home": (context) => BottomNav(),
         "/camera": (context) => Camera(),
+        "/cam":(context)=>CameraScreen(),
 
         // "/success":(context)=>Success(),
       },
